@@ -8,6 +8,6 @@ RUN tar -zxvf Mycat-server-1.6-RELEASE-20161028204710-linux.tar.gz mycat
 ENV MYCAT_HOME=/root/mycat
 ENV PATH=$PATH:${MYCAT_HOME}/bin
 
-RUN chmod u+x /root/mycat
+RUN chmod u+x ${MYCAT_HOME}
 EXPOSE 8066 9066
-CMD ["/root/mycat", "console"]
+CMD ["./mycat", "console"]
