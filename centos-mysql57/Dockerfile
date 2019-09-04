@@ -20,8 +20,8 @@ ENV LC_ALL zh_CN.utf8
 RUN localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
 
 RUN yum -y install wget
-RUN wget http://repo.mysql.com/yum/mysql-5.7-community/docker/x86_64/mysql-community-server-minimal-5.7.27-1.el7.x86_64.rpm
-RUN rpm -ivh mysql-community-server-minimal-5.7.27-1.el7.x86_64.rpm
+RUN wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+RUN rpm -ivh mysql-community-release-el7-5.noarch.rpm
 RUN yum install mysql-server -y
 
 RUN rm -rf /var/lib/mysql && mkdir -p /var/lib/mysql /var/run/mysqld
