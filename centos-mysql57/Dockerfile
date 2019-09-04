@@ -19,6 +19,8 @@ RUN yum clean all
 ENV LC_ALL zh_CN.utf8
 RUN localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
 
+RUN yum install libaio && yum install net-tools && yum  install numactl
+
 RUN yum -y install wget
 RUN wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 RUN rpm -ivh mysql-community-release-el7-5.noarch.rpm
