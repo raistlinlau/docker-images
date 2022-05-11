@@ -34,3 +34,5 @@ VOLUME /var/lib/mysql
 
 EXPOSE 3306 33060
 CMD ["mysqld"]
+
+#docker run -p 3306:3306 --name ws-mysql -v /root/myfile/mysql/conf:/etc/mysql/conf.d -v /root/myfile/mysql/logs:/logs -v /root/myfile/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1@3$5^ -d centos-mysql57
