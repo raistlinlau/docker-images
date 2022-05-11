@@ -16,7 +16,7 @@ RUN yum install -y \
     qt-devel \
     make \
     git && \
-    yum clean all && \
+    yum clean all
     
 RUN ln -s /usr/lib64/qt4/bin/qmake /usr/bin/qmake
 
